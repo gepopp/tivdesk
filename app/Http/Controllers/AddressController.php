@@ -2,19 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use App\account;
-use Dotenv\Validator;
+use App\Address;
 use Illuminate\Http\Request;
 
-class AccountController extends Controller
+class AddressController extends Controller
 {
-
-
-    public function __construct()
-    {
-        return $this->middleware('verified');
-    }
-
     /**
      * Display a listing of the resource.
      *
@@ -49,10 +41,10 @@ class AccountController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\account  $account
+     * @param  \App\Address  $address
      * @return \Illuminate\Http\Response
      */
-    public function show(account $account)
+    public function show(Address $address)
     {
         //
     }
@@ -60,36 +52,33 @@ class AccountController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\account  $account
+     * @param  \App\Address  $address
      * @return \Illuminate\Http\Response
      */
-    public function edit(account $account)
+    public function edit(Address $address)
     {
-        return view('account.edit')->with(['account' => $account,  'intent' => $account->createSetupIntent()]);
+        //
     }
 
     /**
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\account  $account
+     * @param  \App\Address  $address
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, account $account)
+    public function update(Request $request, Address $address)
     {
-        $account->update($request->validate([
-            'name'  => ['required', 'string', 'max:255', 'unique:accounts,name'],
-        ]));
-        return back();
+        //
     }
 
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\account  $account
+     * @param  \App\Address  $address
      * @return \Illuminate\Http\Response
      */
-    public function destroy(account $account)
+    public function destroy(Address $address)
     {
         //
     }

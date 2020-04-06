@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\account_user;
+use App\Subscription;
 use Illuminate\Http\Request;
 
-class AccountUserController extends Controller
+class SubscriptionController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -41,10 +41,10 @@ class AccountUserController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\account_user  $account_user
+     * @param  \App\Subscription  $subscription
      * @return \Illuminate\Http\Response
      */
-    public function show(account_user $account_user)
+    public function show(Subscription $subscription)
     {
         //
     }
@@ -52,10 +52,10 @@ class AccountUserController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\account_user  $account_user
+     * @param  \App\Subscription  $subscription
      * @return \Illuminate\Http\Response
      */
-    public function edit(account_user $account_user)
+    public function edit(Subscription $subscription)
     {
         //
     }
@@ -64,10 +64,10 @@ class AccountUserController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\account_user  $account_user
+     * @param  \App\Subscription  $subscription
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, account_user $account_user)
+    public function update(Request $request, Subscription $subscription)
     {
         //
     }
@@ -75,10 +75,10 @@ class AccountUserController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\account_user  $account_user
+     * @param  \App\Subscription  $subscription
      * @return \Illuminate\Http\Response
      */
-    public function destroy(account_user $account_user)
+    public function destroy(Subscription $subscription)
     {
         //
     }

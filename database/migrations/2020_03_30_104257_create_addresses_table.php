@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateAccountUsersTable extends Migration
+class CreateAddressesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,18 +13,15 @@ class CreateAccountUsersTable extends Migration
      */
     public function up()
     {
-        Schema::create('account_users', function (Blueprint $table) {
+        Schema::create('addresses', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('user_id');
-            $table->unsignedBigInteger('account_id');
+            $table->morphs('addressable');
+            $table->string('address', 255);
+            $table->string('zip', 255);
+            $table->string('city', 255);
+            $table->string('counttry', 255);
             $table->timestamps();
-
-            $table->unique('user_id', 'account_id');
         });
-
-
-
-
     }
 
     /**
@@ -34,6 +31,6 @@ class CreateAccountUsersTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('account_users');
+        Schema::dropIfExists('addresses');
     }
 }

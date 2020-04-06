@@ -15,8 +15,8 @@
                             <label for="account" class="col-md-4 col-form-label text-md-right">{{ __('Account Name') }}</label>
                             <div class="col-md-6">
                                 <input id="account" type="account" class="form-control @error('account') is-invalid @enderror" name="account" value="{{ old('account') }}" required autocomplete="account" autofocus>
-                                <small id="accountHelpBlock" class="form-text text-muted">
-                                    Only letters allowed, this will generate your tivdesk.com domain.
+                                <small id="passwordHelpBlock" class="form-text text-muted">
+                                    eg. Name or your company
                                 </small>
                                 @error('account')
                                 <span class="invalid-feedback" role="alert">
